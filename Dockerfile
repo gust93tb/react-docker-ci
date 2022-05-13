@@ -4,7 +4,7 @@ COPY . /app
 RUN npm cache clean --force
 RUN npm install -g npm@latest --force
 RUN npm cache clean --force
-RUN npm audit fix
+RUN npm audit fix --force
 RUN npm run build 
 
 
