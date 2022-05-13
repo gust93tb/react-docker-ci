@@ -1,7 +1,9 @@
 FROM node:14-stretch-slim as build
 WORKDIR /app
 COPY . /app
-RUN npm install
+RUN npm cache clean --force
+RUN npm install -g npm@latest --force
+RUN npm cache clean --force
 RUN npm audit fix
 RUN npm run build 
 
