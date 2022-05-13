@@ -1,4 +1,4 @@
-#my
+# my config
 version: 2.1
 orbs:
   node: circleci/node@3.0.0
@@ -7,10 +7,12 @@ orbs:
 jobs:
   build-and-push:
     environment:
-      DOCKER_IMAGE: truong.pv/react-docker-ci
+      DOCKER_IMAGE: nhtua/react-docker
       DOCKER_TAG: latest
     executor: docker/docker
     steps:
+      - setup_remote_docker
+      - checkout
       - docker/check:
           docker-username: DOCKER_USER
           docker-password: DOCKER_PASSWORD
