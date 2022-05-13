@@ -10,8 +10,6 @@ jobs:
       DOCKER_TAG: latest
     executor: docker/docker
     steps:
-      - setup_remote_docker
-      - checkout
       - docker/check:
       - docker/build:
           image: $DOCKER_IMAGE
