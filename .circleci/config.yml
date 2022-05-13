@@ -11,6 +11,8 @@ jobs:
     executor: docker/docker
     steps:
       - docker/check:
+          docker-username: DOCKER_USER
+          docker-password: DOCKER_PASSWORD
       - docker/build:
           image: $DOCKER_IMAGE
           tag: $DOCKER_TAG
