@@ -45,7 +45,7 @@ workflows:
           filters:
             branches:
               only:
-                - master
+                - develop_test
       # uncomment the 3 following lines to enable deploying
       # - deploy:
       #     requires:
