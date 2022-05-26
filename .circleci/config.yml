@@ -7,7 +7,7 @@ orbs:
 jobs:
   build-and-push:
     environment:
-      DOCKER_IMAGE: truong.pv/react-docker
+      DOCKER_IMAGE: gust93tb/react-docker
       DOCKER_TAG: latest
     executor: docker/docker
     steps:
