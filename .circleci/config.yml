@@ -12,6 +12,7 @@ jobs:
     executor: docker/docker
     steps:
       - setup_remote_docker
+        version: 20.10.14
       - checkout
       - docker/check:
           docker-username: DOCKER_USER
@@ -26,8 +27,6 @@ jobs:
       - run:
           command: |
             echo "Digest is: $(</tmp/digest.txt)"
-      - setup_remote_docker:
-          version: 20.10.14
   deploy:
     executor: docker/docker
     steps:
