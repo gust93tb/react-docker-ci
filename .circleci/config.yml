@@ -26,6 +26,8 @@ jobs:
       - run:
           command: |
             echo "Digest is: $(</tmp/digest.txt)"
+      - setup_remote_docker:
+          version: 20.10.14
   deploy:
     executor: docker/docker
     steps:
